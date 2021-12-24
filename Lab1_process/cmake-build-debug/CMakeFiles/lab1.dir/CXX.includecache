@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/narrow/OSLab/Lab1_process/main.cpp
+iostream
+-
+csignal
+-
+unistd.h
+-
+cstring
+-
+sys/wait.h
+-
+
