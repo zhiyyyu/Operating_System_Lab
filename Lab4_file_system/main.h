@@ -5,10 +5,16 @@
 #ifndef LAB4_MAIN_H
 #define LAB4_MAIN_H
 
+#include <unistd.h>
+#include <cstring>
 #include <iostream>
+#include <vector>
 #include <string>
 #include <dirent.h>
 #include <sys/stat.h>
+#include <grp.h>
+#include <pwd.h>
+#include <algorithm>
 
 using namespace std;
 
@@ -18,6 +24,18 @@ using namespace std;
         exit(-1);               \
     }
 
+// typedef enum ENTRY_TYPE{
+//     IS_FILE,
+//     IS_DIR
+// } ENTRY_TYPE;
+
+typedef struct dirent Dirent;
+typedef struct stat Stat;
+
+constexpr int MAX_PATH_LENGTH = 100;
+constexpr int MAX_DEPTH_DEFAULT = 4;
+
 void printdir(const char* dir, int depth);
+void printDetails(struct stat *statbuf, struct dirent *entry);
 
 #endif //LAB4_MAIN_H
