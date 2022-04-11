@@ -28,10 +28,6 @@ int main(int argc, char** args){
         cout << "target dir: " << target_dir << endl;
         cout << "depth: " << max_depth << endl << endl;
     }
-//    DIR* cur_dir = opendir(target_dir.c_str());
-//    ASSERT(cur_dir, nullptr, "open " + target_dir + " dir failed");
-//    ret = chdir(target_dir.c_str());
-//    ASSERT(ret, -1, "chdir to " + target_dir + " failed.");
     printdir(target_dir.c_str(), 0);
 
     return 0;

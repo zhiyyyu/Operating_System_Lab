@@ -4,7 +4,7 @@
 
 int main(int argc, char *argv[])
 {
-    if(int s1 = fork(); s1 == 0){
+    if(int s1 = fork(); s1 == 0){   // c++17写法
         execv("./sub1", argv);
         exit(0);
     }

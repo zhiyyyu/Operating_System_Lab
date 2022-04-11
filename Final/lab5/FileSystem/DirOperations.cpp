@@ -87,10 +87,6 @@ void DirOperations::cd(string path){
     int start = 0;
     while(it != string::npos){
         Dir* p = TinyFileSystem::cur_dir->head_dirs;
-        if(!p){
-            qDebug() << "failed to cd.";
-            return;
-        }
         bool hasSub = true;
         while(p){
             if(p->name == path.substr(start, it-start)){
